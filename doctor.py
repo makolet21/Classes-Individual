@@ -19,7 +19,7 @@ class Doctor:
  
 #Formats each doctor’s information (propertis) in the same format used in  the .txt file (i.e., has uderscores between values)
     def formatDrInfo(self, obj):
-        return (" ".join(str(obj).split()).replace(" ","_")+"\n")
+        return ("\n"+" ".join(str(obj).split()).replace(" ","_"))
    
  #Asks the user to enter doctor properties (listed in the Properties point)
     def enterDrInfo(self): 
@@ -30,7 +30,7 @@ class Doctor:
         qualification= input("Enter the doctor’s qualification: ")
         room_number= int(input("Enter the doctor’s room_number: "))
 
-        doctor = Doctor(id,name,specialization,working_time,qualification,room_number)
+        doctor = Doctor(id,name.replace(" ",""),specialization,working_time,qualification,room_number)
         return doctor
         
 
@@ -83,7 +83,7 @@ class Doctor:
                 qualification= input("Enter new Qualification: ")
                 room_number= int(input("Enter new Room number: "))
 
-                updated_doctor = Doctor(search_id,name,specialization,working_time,qualification,room_number)
+                updated_doctor = Doctor(search_id,name.replace(" ",""),specialization,working_time,qualification,room_number)
        
                 self.doctor_list[index]  = self.formatDrInfo(updated_doctor)
                 self.writeListOfDoctorsToFile()

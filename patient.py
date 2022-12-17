@@ -17,7 +17,7 @@ class Patient:
 
 # Method Name	
     def formatPatientInfo(self,obj):#	Formats patient information to be added to the file
-        return (" ".join(str(obj).split()).replace(" ","_")+"\n")
+        return ("\n"+" ".join(str(obj).split()).replace(" ","_"))
 
     def enterPatientInfo(self):#	Asks the user to enter the patient info 
         pid= int(input("Enter Patient id: "))

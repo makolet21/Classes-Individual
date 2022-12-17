@@ -19,7 +19,7 @@ Select from the following options, or select 0 to stop:
 1 - 	Doctors
 2 - 	Facilities
 3 - 	Laboratories
-4 - 	Patients 1
+4 - 	Patients
 
 Option: '''))
             
